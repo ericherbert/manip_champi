@@ -12,7 +12,7 @@ import numpy as np
 import sys
 
 def PARAMS():
-    path = '/home/hyphes/29_oct/VST/'
+    path = '/home/eh/DD2/recherche/hyphes_croissance/data/2019_04_09_P_S_M2/VST/'
     path_s =  '/outputData/'
     s_name = "all_nodes"
     file_time = 'log.txt'
@@ -49,8 +49,8 @@ def get_nodes( path, path_s, s_name):
 
 if __name__ == "__main__":
 
-    path, path_s, sname, file_time = PARAMS()
-    nodes = get_nodes( path, path_s, sname)
+    path, path_s, s_name, file_time = PARAMS()
+    nodes = get_nodes( path, path_s, s_name)
 
     if os.path.isfile( file_time):
         time = read_time( file_time)
