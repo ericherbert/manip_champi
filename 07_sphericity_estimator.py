@@ -1,10 +1,10 @@
 
 
-# estimation de la sphericité d'un nuage de point, basé sur les vecteurs propre de la matrice d'inertie.
+# estimation de la sphericité d'un nuage de point, basé sur les vecteurs propre de la matrice d'inertie. 
+# x,y sont les coordonnées des noeuds
 
 
 import matplotlib.pyplot as plt
-from scipy.optimize import curve_fit
 import numpy as np
 
 
