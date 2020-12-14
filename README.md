@@ -2,6 +2,10 @@
 
 contient les codes utilisés pour faire des extractions simples depuis les gpickle
 
+## 05 fit gaussienne repliée
+Fit gaussien.
+Remplacer *x* et *y* par leurr valeurs respectives. Si la distribution prend des valeurs négatives, utiliser le fit *normal*, si distribution d'une valeur absolue, prendre le fit *replié* 
+
 ## Distribution masse
 
 Calcul de la distribution de la masse dans le thalle. Attention à bien mettre le centre repéré sur ImageJ dans Distribution_masse 
