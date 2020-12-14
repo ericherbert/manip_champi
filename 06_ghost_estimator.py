@@ -12,16 +12,24 @@ def Number(x,y0,tau):
     return y0 * np.exp(x/tau)
 
 def Ghosts(V1,V3):
-    return 1- V1/V3 * V3[0]/V1[0]
+    return 1 - V1/V3 * V3[10]/V1[10]
 
-def PARAMS():
-    x   = np.arange( 0, 20, 2)
-    V1  = Number( x, y0=3, tau=5)
-    V3  = Number( x, y0=1, tau=3)
+def PARAMS(synthetic):
+    if synthetic:
+        x   = np.arange( 0, 100, 2)
+        V1  = Number( x, y0=3, tau=50)
+        V3  = Number( x, y0=1, tau=20)
+    else :
+        local_path = 'Fichiers_test/outputData/'
+        Vi  = np.loadtxt( local_path + 'all_nodes.txt' )
+        # bidouille +1 pour les problèmes de V1=0 et V3=0 pour petits t
+        V1  = Vi[:,1]+1 
+        V3  = Vi[:,2]+1
+        x   = Vi[:,0]
     return x,V1,V3
 
 
-x,V1,V3 = PARAMS()
+x,V1,V3 = PARAMS(synthetic=0)
 ghosts  = Ghosts( V1, V3)
 
 
