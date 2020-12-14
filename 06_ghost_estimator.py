@@ -14,13 +14,14 @@ def Number(x,y0,tau):
 def Ghosts(V1,V3):
     return 1- V1/V3 * V3[0]/V1[0]
 
+def PARAMS():
+    x   = np.arange( 0, 20, 2)
+    V1  = Number( x, y0=3, tau=5)
+    V3  = Number( x, y0=1, tau=3)
+    return x,V1,V3
 
 
-x   = np.arange( 0, 20, 2)
-V1  = Number( x, y0=3, tau=5)
-V3  = Number( x, y0=1, tau=3)
-
-
+x,V1,V3 = PARAMS()
 ghosts  = Ghosts( V1, V3)
 
 
@@ -28,7 +29,6 @@ plt.close('all')
 plt.figure('Vertices')
 plt.plot(x,V1)
 plt.plot(x,V3)
-
 
 plt.figure('ghosts')
 plt.plot(x,ghosts,'o')

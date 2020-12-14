@@ -1,7 +1,7 @@
 
 
 # estimation de la sphericité d'un nuage de point, basé sur les vecteurs propre de la matrice d'inertie. 
-# x,y sont les coordonnées des noeuds
+# x,y sont les coordonnées des noeuds, ici calculées, il faut les remplacer par les données véritables.
 
 
 import matplotlib.pyplot as plt
@@ -66,8 +66,6 @@ print(E)
 print('verif')
 print( I - P.dot(D.dot(np.linalg.inv(P) )))
 '''
-
-
 
 plt.close('all')
 
